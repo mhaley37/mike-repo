@@ -1,0 +1,26 @@
+name: Integrate your repositories with the Console UI
+description: Submit a request to integrate your repositories with the Console UI for a richer user experience
+title: '[Repository onboarding]: '
+labels: ['onboarding']
+body:
+  - type: dropdown
+    id: environments
+    attributes:
+      label: Environments
+      description: What environments do you want to register your repositories in? _Utility is the Production environment for the Console UI._
+      multiple: true
+      options:
+        - Local
+        - Development
+        - Staging
+        - Utility
+    validations:
+      required: true
+  - type: textarea
+    id: repositories
+    attributes:
+      label: Repositories
+      description: Please provide a list of repositories you'd like to integrate with the Console UI in the format show below. Make sure to include the repository name and a link to the repository.
+      value: '- [ ] [vets-website](https://github.com/department-of-veterans-affairs/vets-website)'
+    validations:
+      required: true
