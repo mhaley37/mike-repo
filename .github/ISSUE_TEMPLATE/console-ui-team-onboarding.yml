@@ -2,10 +2,10 @@ name: Console UI Team Onboarding
 description: Open an issue to add your team's assets to The VA Platform Console.
 title: "Console UI Team Onboarding: [ Insert Your GitHub Team Name ]"
 labels: ["onboarding"]
-assignees:
-  - lhelmer
-  - rbsingleton
-  - TPurple
+# assignees:
+#   - lhelmer
+#   - rbsingleton
+#   - TPurple
 body:
   - type: input
     id: team-name
@@ -22,60 +22,60 @@ body:
       options: 
         - Platform
         - VFS 
-  - type: input
-    id: product-manager-contact
-    attributes:
-      label: Who is your team's product manager?
-      description: GitHub username or e-mail address.
-      placeholder: ex. @lhelmer
-    validations:
-      required: true
-  - type: input
-    id: engineering-lead-contact
-    attributes:
-      label: Who is your team's engineering lead?
-      description: GitHub username or e-mail address.
-      placeholder: ex. @jchapin
-    validations:
-      required: true
-  - type: textarea
-    id: what-components-to-add
-    attributes:
-      label: What software project(s)/component(s) do you maintain or use that you would like to add to the catalog?
-      description: Also, describe any relationships or dependencies that exist for these project(s)/component(s).
-  - type: dropdown
-    id: do-your-components-consume-or-offer-apis
-    attributes:
-      label: Do your software project(s)/component(s) offer or consume APIs?
-      description: Do you provide an API, or does your product depend upon an API? The consumers can be internal or external to the organization, as can the APIs consumed.
-      options: 
-        - 'Yes'
-        - 'No'
-  - type: dropdown
-    id: api-documentation-format
-    attributes:
-      label: If yes, in what format is the API documentation for the project(s)/component(s) available?
-      options: 
-        - No Documentation Exists
-        - OpenAPI/Swagger
-        - Other
-  - type: textarea
-    id: what-infrastructure-resources-to-add
-    attributes:
-      label: What infrastructure resources from Amazon or other cloud providers are you using?
-      description: For example, does your application run on AWS EKS, EC2, or Lambda?  Does it depend on RDS or Redis?
-  - type: textarea
-    id: what-environments-exist
-    attributes:
-      label: What environments do your project(s)/component(s) run in currently?
-      description: Are your project(s)/component(s) running in dev, test, staging, utility, and/or production?
-  - type: textarea
-    id: what-documentation-exists
-    attributes:
-      label: Do you maintain technical documentation for your project(s)/component(s) specific to those project(s)/component(s)?
-      description: For example, do you maintain README, SETUP, Wiki, or other documentation that would be of interest to your team members, but not applicable to The VA Platform? 
-  - type: textarea
-    id: what-are-your-pain-points
-    attributes:
-      label: What are your pain points in working with other stakeholders in The VA Platform?
-      description: For example, do you have difficulty communicating or obtaining support from other teams, or does your team's burden of supporting other stakeholders cause problems?
+  # - type: input
+  #   id: product-manager-contact
+  #   attributes:
+  #     label: Who is your team's product manager?
+  #     description: GitHub username or e-mail address.
+  #     placeholder: ex. @lhelmer
+  #   validations:
+  #     required: true
+  # - type: input
+  #   id: engineering-lead-contact
+  #   attributes:
+  #     label: Who is your team's engineering lead?
+  #     description: GitHub username or e-mail address.
+  #     placeholder: ex. @jchapin
+  #   validations:
+  #     required: true
+  # - type: textarea
+  #   id: what-components-to-add
+  #   attributes:
+  #     label: What software project(s)/component(s) do you maintain or use that you would like to add to the catalog?
+  #     description: Also, describe any relationships or dependencies that exist for these project(s)/component(s).
+  # - type: dropdown
+  #   id: do-your-components-consume-or-offer-apis
+  #   attributes:
+  #     label: Do your software project(s)/component(s) offer or consume APIs?
+  #     description: Do you provide an API, or does your product depend upon an API? The consumers can be internal or external to the organization, as can the APIs consumed.
+  #     options: 
+  #       - 'Yes'
+  #       - 'No'
+  # - type: dropdown
+  #   id: api-documentation-format
+  #   attributes:
+  #     label: If yes, in what format is the API documentation for the project(s)/component(s) available?
+  #     options: 
+  #       - No Documentation Exists
+  #       - OpenAPI/Swagger
+  #       - Other
+  # - type: textarea
+  #   id: what-infrastructure-resources-to-add
+  #   attributes:
+  #     label: What infrastructure resources from Amazon or other cloud providers are you using?
+  #     description: For example, does your application run on AWS EKS, EC2, or Lambda?  Does it depend on RDS or Redis?
+  # - type: textarea
+  #   id: what-environments-exist
+  #   attributes:
+  #     label: What environments do your project(s)/component(s) run in currently?
+  #     description: Are your project(s)/component(s) running in dev, test, staging, utility, and/or production?
+  # - type: textarea
+  #   id: what-documentation-exists
+  #   attributes:
+  #     label: Do you maintain technical documentation for your project(s)/component(s) specific to those project(s)/component(s)?
+  #     description: For example, do you maintain README, SETUP, Wiki, or other documentation that would be of interest to your team members, but not applicable to The VA Platform? 
+  # - type: textarea
+  #   id: what-are-your-pain-points
+  #   attributes:
+  #     label: What are your pain points in working with other stakeholders in The VA Platform?
+  #     description: For example, do you have difficulty communicating or obtaining support from other teams, or does your team's burden of supporting other stakeholders cause problems?
