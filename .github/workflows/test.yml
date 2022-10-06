@@ -22,7 +22,7 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN	}}" \
             https://api.github.com/repos/${{ github.repository }} 2>/dev/null | \
-            jq ".default_branch" )
+            jq -r ".default_branch" )
           if [ -z "$BRANCH" ]; then
             echo "Failed to detect branch for repo: ${{ github.repository }}"
             exit 1
