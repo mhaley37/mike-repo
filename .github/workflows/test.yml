@@ -1,31 +1,16 @@
-# This is a basic workflow to help you get started with Actions
+name: Test accessing vault secrets.ACCESS_TOKEN
 
-name: CI
-
-# Controls when the workflow will run
-on:
+on: 
   push:
-    branches: [ "master" ]
-
-  workflow_dispatch:
 
 jobs:
- test:
-    runs-on: ubuntu-latest
-
+  test:
+    runs-on: ubuntu-20.04
     steps:
-      - name: Get default branch
-        id: get-default-branch
-        run: |
-          BRANCH=$( \
-            curl \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN	}}" \
-            https://api.github.com/repos/${{ github.repository }} 2>/dev/null | \
-            jq ".default_branch" )
-          if [ -z "$BRANCH" ]; then
-            echo "Failed to detect branch for repo: ${{ github.repository }}"
-            exit 1
-          fi
-          echo "BRANCH: $BRANCH"
-          echo "::set-output name=branch::$BRANCH"    
+    - name: verify runner can reach vault
+      id: curl-vault
+      run: |
+        echo "::set-output name=response::$(curl https://ldx-mapi.lighthouse.va.gov/vault:8200)"
+    - name: check response 
+      run: |
+        echo "response back was: ${{ steps.curl-vault.outputs.response }} !"
